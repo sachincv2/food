@@ -1,0 +1,302 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+body{
+    background-color: rgb(247, 249, 250);
+}
+.main{
+    background-color: white;
+    max-width:981px;
+    color: #212426;
+}
+.l{
+    display: inline-flex;
+}
+.p{
+    padding: 15px 80px 10px 80px;
+}
+body p{
+    font-size:20px;
+    margin-top : 10px;
+}
+body h2{
+   font-size:30px; 
+}
+.name{
+    text-align:center;
+    font-size:60px;
+    margin-bottom:0;
+}
+.likes{
+    text-align:center;
+    margin-top:0;
+    position:relative;
+    top:-10px;
+    margin-right:20px;
+    font-size:17px;
+}
+.main-home{
+    max-width:78%;
+    margin: auto;
+
+}
+.caro{
+    height: 550px;
+    background-image: url(mainback2.jpg);
+}
+.footer{
+    height: 200px;
+    background-color: #343a40;
+}
+.center-band-head{
+    text-align: center;
+    padding: 12px
+}
+.cat-row{
+    height: 350px;
+}
+.home-head{
+    margin-top: 8px;
+}
+.band-heads{
+    color: white;
+}
+.explore-btn{
+    position: absolute;
+    top: 49%;
+    left: 45%;
+    z-index: 1;
+    width: 189px;
+    font-size: 27px;
+    padding: 9px;
+}
+.styleimage{
+    height:350px;
+    width:100%;
+    margin: auto;
+    display: block;
+    border : 1px solid black;
+    padding:1px;
+    border-radius: 30px;
+}
+.catimage{
+    height: 300px;
+    width: 100%;
+}
+.band{
+    height: 60px;
+    background-color: #343a40;
+    margin-top: 10px;
+    
+}
+.band-row{
+    text-align: center;
+    color: white;
+    height: inherit;
+}
+.band-col{
+    margin: auto;
+    padding: 0;
+}
+.login-form-css{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-top: 7%;
+    box-shadow: 
+    0 0 1px rgba(0, 0, 0, 0.3), 
+    0 3px 7px rgba(0, 0, 0, 0.3), 
+    inset 0 1px rgba(255,255,255,1),
+    inset 0 -3px 2px rgba(0,0,0,0.25);
+    height: 450px;
+    
+}
+.heads-up{
+    margin-bottom: 20px;
+}
+.form-control{
+    margin: auto;
+    width: 80%;
+}
+.login-inner{
+    padding: 70px;
+}
+footer{
+    height: 400px;
+    background-color: #343a40;
+    margin-top: 20px;
+}
+header nav{
+    height: 78px;
+}
+.field{
+    margin-top: 10px;
+}
+.actions{
+    margin-top: 10px;
+}
+.alert{
+    text-align: center;
+    padding: 0;
+}
+.border-a{
+    text-decoration: none;
+    color: black;
+}
+.carimage{
+    height:550px;
+    width:100%;
+    margin: auto;
+    display: block;
+    padding:1px;
+}
+.category-block{
+    padding: 10px;
+    margin: auto;
+}
+.border{
+    border:1px solid #e3e8ed;
+    background-color:#D0D0D0;
+    box-shadow: 5px 10px 18px #888888;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+}
+.displaytime{
+    display: flex;
+    flex-direction: row;
+}
+.displaytime .likes{
+    left: 77%;
+    position: relative;
+}
+.displaytime button{
+width:90px;
+height:30px;
+}
+.stepimage{
+    display:block;
+}
+.space{
+    padding-left: 12px;
+}
+.IE{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+.innerstepblock button{
+    margin-top:10px
+}
+.likesandcom{
+    display: inline-flex;
+    width: 100%;
+    justify-content:center;
+    color: #7a8e9d;
+}
+.c{
+    border:1px solid #e3e8ed;
+    padding:5px 5px 5px 10px;
+}
+.c h2{
+    border-bottom:1px solid #e3e8ed;
+    padding-bottom:7px;
+
+}
+.metadata{
+    border:2px solid #e3e8ed;
+    border-radius: 4px;
+    padding: 5px;
+    color: #212426;
+    font-weight: 400;
+    font-size: 16px;
+}
+.stepdesc{
+    height: 300px;
+    
+}
+.heads{
+    font-size: 22px;
+    color: #212426;
+    text-transform: uppercase;
+}
+.desc{
+    color: #525d66;
+    font-weight: 300;
+    font-size: 24px;
+
+}
+.stitle{
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+.row-divider{
+    background-color:#e3e8ed ;
+    height: 1px;
+    width: 68%;
+}
+.cog{
+    color: #1c1e20;
+}
+.cog1{
+    color: #1975f1;
+}
+.cog2{
+    color: #f9c03e;
+
+}
+.steptitle{
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.stepaside{
+    height:300px;
+}
+.gap{
+    margin-bottom: 30px;
+}
+
+.lc{
+    margin-bottom: 0;
+}
+.lc p{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 11px 11px 11px 0px;    
+}
+.llc{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 500;
+}
+.cblock{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.divider{
+    display: inline-flex;
+    align-items: center;
+}

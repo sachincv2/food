@@ -1,0 +1,94 @@
+<div class="caro" >
+  <button type="button" class="btn btn-light explore-btn"><a class="border-a" href="/recipie/index">EXPLORE</a></button> 
+  <%= image_tag("mainback2.jpg", :alt => "rss feed",  :class => "carimage") %>
+</div>
+<div class="main-home">
+
+    <div class="band">
+      <div class="row band-row">
+        <div class="col-4 band-col"><h3>EXPLORE</h3></div>
+        <div class="col-4 band-col"><h3>COOK</h3></div>
+        <div class="col-4 band-col"><h3>REPEAT</h3></div>
+      </div>
+    </div>
+
+    <div class="category-block">
+        <div class="row ">
+            <div class="col-md-12 col-sm-12 col-lg-4 border">
+            <a class = "border-a" href="/recipie/index">
+              <div>
+                <%= image_tag("Indianfood.jpg", :alt => "rss feed",  :class => "catimage") %>
+              </div>
+              <div>
+                <h3 class="home-head">Indian</h3>
+              </div></a>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-4 border">
+            <a class = "border-a" href="/recipie/index">
+              <div>
+                <%= image_tag("chinesefood.jpg", :alt => "rss feed",  :class => "catimage") %>
+              </div>
+              <div>
+                <h3 class="home-head">Chinese</h3>
+              </div></a>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-4 border">
+            <a class = "border-a" href="/recipie/index">
+              <div>
+                <%= image_tag("mexicanfood.jpg", :alt => "rss feed",  :class => "catimage") %>
+              </div>
+              <div>
+                <h3 class="home-head">Mexican</h3>
+              </div></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="band center-band-head">
+      <div>
+        <h3 class="band-heads">OUR RECOMMENDATIONS</h3>
+      </div>    
+    </div>
+
+    <div class="category-block">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-lg-4 border">
+          <a class = "border-a" href="/recipie/index">
+            <div>
+              <%= image_tag("italianfood.jpg", :alt => "rss feed",  :class => "catimage") %>
+            </div>
+            <div>
+              <h3 class="home-head">Italian</h3>
+            </div></a>
+          </div>
+          <div class="col-md-12 col-sm-12 col-lg-4 border">
+          <a class = "border-a" href="/recipie/index">
+            <div>
+              <%= image_tag("frenchfood.jpg", :alt => "rss feed",  :class => "catimage") %>
+            </div>
+            <div>
+              <h3 class="home-head">French</h3>
+            </div></a>
+          </div>
+          <div class="col-md-12 col-sm-12 col-lg-4 border">
+          <a class = "border-a" href="/recipie/index">
+            <div>
+              <%= image_tag("Swedish-Food.jpg", :alt => "rss feed",  :class => "catimage") %>
+            </div>
+            <div>
+              <h3 class="home-head">Swedish</h3>
+            </div></a>
+          </div>
+        </div>
+    </div>
+
+</div>
+<footer>
+<div>
+<% if user_signed_in? %>
+        <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+        <li><%= link_to "Sign up now!",  new_user_registration_path%></li>
+        <% end %></div></footer>
+
+
