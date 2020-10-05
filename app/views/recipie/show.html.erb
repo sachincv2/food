@@ -17,6 +17,7 @@
           <div class="col-sm-12 col-md-6 ">
             <!-- [PR]: Can you make this metadata section dynamic? -->
             <!-- Essentially all metadata should come from an array and you should display them in a loop -->
+            <!-- How will the icons change? -->
               <div class="row metadata">
                   <div class="col lc">
                     <p>
@@ -60,17 +61,13 @@
           <div class="row">
               <div class="col-sm-12 col-md-6 c">
                   <h2 class="heads">Ingredients </br></h2>
-                  <!-- [PR]: This splitting operation should be done in Model, so that you don't have to duplicate this logic everywhere. -->
-                  <!-- @recipie.ingredients should return an array of ingredients which you can display here -->
-                  <% he = @recipie.recipie_ingredients.split(',').each do |h| %>
+                  <% @recipieskills.each do |h| %>
                       <li class="desc"><%= h %></li>
                   <% end %>
               </div>
               <div class="col-sm-12 col-md-6 c">
                   <h2 class="heads">Equipments </br></h2>
-                  <!-- [PR]: This splitting operation should be done in Model, so that you don't have to duplicate this logic everywhere. -->
-                  <!-- @recipie.equipments should return an array of equipments which you can display here -->
-                  <% he = @recipie.recipie_equipments.split(',').each do |h| %>    
+                  <% @recipieequipments.each do |h| %>    
                       <li class="desc"><%= h %></li>
                   <% end %>
               </div>
