@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_28_142444) do
+ActiveRecord::Schema.define(version: 2020_10_02_115149) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,22 @@ ActiveRecord::Schema.define(version: 2020_09_28_142444) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "category_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "category_image"
+  end
+
+  create_table "category_recipies", force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.integer "recipie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_category_recipies_on_category_id"
+    t.index ["recipie_id"], name: "index_category_recipies_on_recipie_id"
+  end
+
   create_table "comments", force: :cascade do |t|
     t.integer "comment_num"
     t.text "comment_text"
@@ -42,8 +58,23 @@ ActiveRecord::Schema.define(version: 2020_09_28_142444) do
     t.index ["step_id"], name: "index_comments_on_step_id"
   end
 
-# Could not dump table "recipies" because of following StandardError
-#   Unknown type 'String' for column 'Difficulty'
+  create_table "recipies", force: :cascade do |t|
+    t.string "recipie_name"
+    t.string "recipie_category"
+    t.string "recipie_type"
+    t.integer "recipie_time"
+    t.integer "recipie_likes"
+    t.text "recipie_description"
+    t.string "recipie_video_url"
+    t.text "recipie_equipments"
+    t.text "recipie_skills"
+    t.integer "recipie_price"
+    t.text "recipie_image_path"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "recipie_ingredients"
+    t.string "recipie_difficulty"
+  end
 
   create_table "steps", force: :cascade do |t|
     t.text "step_description"
@@ -70,6 +101,8 @@ ActiveRecord::Schema.define(version: 2020_09_28_142444) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "category_recipies", "categories"
+  add_foreign_key "category_recipies", "recipies", column: "recipie_id"
   add_foreign_key "comments", "steps"
   add_foreign_key "steps", "recipies", column: "recipie_id"
 end

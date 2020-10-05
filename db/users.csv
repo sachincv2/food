@@ -1,0 +1,2 @@
+id,email,encrypted_password,reset_password_token,reset_password_sent_at,remember_created_at,created_at,updated_at
+1,sachincv340@gmail.com,$2a$12$FvPfzs8hPTyhV8dT7lRcDunM6AP.fXSLafJuce02ivAQuk5QJDfY.,,,,2020-09-28 11:20:59.030771,2020-09-28 11:20:59.030771

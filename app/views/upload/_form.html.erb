@@ -1,0 +1,58 @@
+
+<%= form_with scope: :upload_recipie, url: upload_index_url, local: true do |form| %>
+    <div>
+      <%= form.label :recipie_name %><br>
+      <%= form.text_field :recipie_name %>
+    </div>
+
+    <%= select_tag "Category", options_from_collection_for_select(Category.all, :id, :category_name), {:class=>'form-control', :prompt => 'Selected Category'}  %>
+
+    <div>
+      <%= form.label :recipie_type %><br>
+      <%= form.text_field :recipie_type %>
+    </div>
+
+    <div>
+      <%= form.label :recipie_time %><br>
+      <%= form.text_field :recipie_time %>
+    </div>
+
+    <div>
+      <%= form.label :recipie_likes %><br>
+      <%= form.text_field :recipie_likes %>
+    </div>
+
+    <div>
+      <%= form.label :recipie_description %><br>
+      <%= form.text_area :recipie_description %>
+    </div>
+
+    <div>
+      <%= form.label :recipie_video_url %><br>
+      <%= form.text_field :recipie_video_url %>
+    </div>
+
+    <p>
+      <%= form.label :recipie_equipments %><br>
+      <%= form.text_area :recipie_equipments %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_skills %><br>
+      <%= form.text_area :recipie_skills %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_price %><br>
+      <%= form.text_field :recipie_price %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_image_path %><br>
+      <%= form.text_field :recipie_image_path %>
+    </p>
+   
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>

@@ -1,0 +1,86 @@
+<%= form_with model: @recipie, local: true do |form| %>
+ 
+    <% if @recipie.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@recipie.errors.count, "error") %> prohibited
+          this recipie from being saved:
+        </h2>
+        <ul>
+          <% @recipie.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+   
+    <p>
+      <%= form.label :recipie_name %><br>
+      <%= form.text_field :recipie_name %>
+    </p>
+   
+    <p>
+      <%= form.label :recipie_category %><br>
+      <%= form.text_field :recipie_category %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_type %><br>
+      <%= form.text_field :recipie_type %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_time %><br>
+      <%= form.text_field :recipie_time %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_likes %><br>
+      <%= form.text_field :recipie_likes %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_description %><br>
+      <%= form.text_area :recipie_description %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_video_url %><br>
+      <%= form.text_field :recipie_video_url %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_equipments %><br>
+      <%= form.text_area :recipie_equipments %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_skills %><br>
+      <%= form.text_area :recipie_skills %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_price %><br>
+      <%= form.text_field :recipie_price %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_image_path %><br>
+      <%= form.text_field :recipie_image_path %>
+    </p>
+
+    <p>
+      <%= form.label :recipie_ingredients %><br>
+      <%= form.text_area :recipie_ingredients %>
+    </p>
+
+    <p>
+      <%= form.label :Difficulty %><br>
+      <%= form.text_field :Difficulty %>
+    </p>
+   
+    <p>
+      <%= form.submit %>
+    </p>
+   
+  <% end %>

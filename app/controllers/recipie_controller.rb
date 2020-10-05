@@ -1,7 +1,7 @@
 class RecipieController < ApplicationController
   before_action :authenticate_user!
-  def index
-    @recipie = Recipie.find_by recipie_name: 'Lemon Tea'
+  def show
+    @recipie = Recipie.find(params[:id])
     @steps = Step.where(recipie_id: @recipie.id)
   end
 end

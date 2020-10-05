@@ -72,7 +72,14 @@ body h2{
 }
 .home-head{
     margin-top: 8px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    color:black;
+    font-size: calc(1.3rem + 0.6vw);
 }
+
 .band-heads{
     color: white;
 }
@@ -94,7 +101,7 @@ body h2{
     padding:1px;
     border-radius: 30px;
 }
-.catimage{
+.border img{
     height: 300px;
     width: 100%;
 }
@@ -125,6 +132,20 @@ body h2{
     inset 0 -3px 2px rgba(0,0,0,0.25);
     height: 450px;
     
+}
+.cat-page{
+    margin-top: 20px;
+    padding: 5px;
+}
+.cat-col{
+    margin-bottom: 20px;
+}
+.cat-btn{
+    color: white;
+    text-decoration: none;
+}
+.cat-btn:hover{
+    color: white;
 }
 .heads-up{
     margin-bottom: 20px;
@@ -157,6 +178,7 @@ header nav{
 .border-a{
     text-decoration: none;
     color: black;
+   
 }
 .carimage{
     height:550px;
@@ -177,6 +199,7 @@ header nav{
     display: flex;
     flex-direction: column;
     padding: 0;
+    margin-bottom: 20px;
 
 }
 .displaytime{
@@ -299,4 +322,15 @@ height:30px;
 .divider{
     display: inline-flex;
     align-items: center;
+}
+.upload-form{
+    text-align: center;
+    margin-top: 50px;
+    background-color: white;
+}
+.upload-form-head{
+    padding: 10px;
+}
+.upload-form .row-divider{
+    width: 100%;
 }

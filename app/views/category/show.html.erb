@@ -1,0 +1,16 @@
+<div class="container cat-page">
+    <div class="row">
+        <% @recipies.each do |recipie| %>
+                <div class="col-md-12 col-sm-12 col-lg-12 cat-col">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= recipie.recipie_name %></h5>
+                            <p class="card-text"><%= recipie.recipie_description %></p>
+                            <button type="button" class="btn btn-primary"><%= link_to 'Show', recipie_path(recipie), class: "cat-btn"  %></button>
+                        </div>
+                    </div>
+                </div>
+        <% end %>
+    </div>
+</div>
+

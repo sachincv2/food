@@ -1,0 +1,4 @@
+id,step_description,step_num,step_image_path,step_title,step_cautionpoint,recipie_id,created_at,updated_at
+1,Take hot water,1,google.com/lemontea,First Step,none,1,2020-09-18 13:58:10.613755,2020-09-18 13:58:10.613755
+2,"Once the water comes to a boil, simmer the heat. Add tea leaves and let them steep for a minute.",2,lemonteastep2.jpg,Second Step,beware of hot water,1,2020-09-18 13:58:10.613755,2020-09-18 13:58:10.613755
+3,Add lemon juice and honey and stir well. Serve immediately.,3,lemonteastep3.jpg,Third Step,beware of hot water,1,2020-09-18 13:58:10.613755,2020-09-18 13:58:10.613755
