@@ -5,10 +5,8 @@ Rails.application.routes.draw do
   get 'home/index'
   resources :recipie
   # [PR]: This below route is redundant
-  get 'recipie/show'
+  
   resources :category
   get 'home/dashboard'
   resources :upload
-
-
 end
