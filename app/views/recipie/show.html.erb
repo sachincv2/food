@@ -1,17 +1,23 @@
+<!-- [PR]: This file is not properly indented -->
 <div class="container main">
 <div>
     <h1 class="name"> <%= @recipie.recipie_name %> </h1>
 </div>
 <div class="likesandcom">
+  <!-- [PR]: You should display 0 in the UI, if `@recipie.recipie_likes` is nil -->
+  <!-- An ideal way to do this is to make the default value of the DB column to be 0, so that you don't have to handle these cases. But just hardcoding in UI is fine for now. -->
     <p class="likes"><i class="far fa-thumbs-up cog1"></i><span class="space">Likes :</span> <%= @recipie.recipie_likes %></p>
     <p class="likes"><i class="far fa-comment-alt cog2"></i><span class="space">Comments :</span> <%= @recipie.recipie_likes %></p>
 </div>
 
     <div class="row">
         <div class="col-sm-12 col-md-6">
+          <!-- [PR]: Why do all images have "rss feed" as alt text? -->
            <%= image_tag("lemonttea.jpg", :alt => "rss feed",  :class => "styleimage") %> 
         </div>
         <div class="col-sm-12 col-md-6 ">
+          <!-- [PR]: Can you make this metadata section dynamic? -->
+          <!-- Essentially all metadata should come from an array and you should display them in a loop -->
            <div class="row metadata">
               <div class="col lc">
                 <p>
@@ -53,12 +59,16 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 c">
                 <h2 class="heads">Ingredients </br></h2>
+                <!-- [PR]: This splitting operation should be done in Model, so that you don't have to duplicate this logic everywhere. -->
+                <!-- @recipie.ingredients should return an array of ingredients which you can display here -->
                 <% he = @recipie.recipie_ingredients.split(',').each do |h| %>
                     <li class="desc"><%= h %></li>
                 <% end %>
             </div>
             <div class="col-sm-12 col-md-6 c">
                 <h2 class="heads">Equipments </br></h2>
+                <!-- [PR]: This splitting operation should be done in Model, so that you don't have to duplicate this logic everywhere. -->
+                <!-- @recipie.equipments should return an array of equipments which you can display here -->
                 <% he = @recipie.recipie_equipments.split(',').each do |h| %>    
                     <li class="desc"><%= h %></li>
                 <% end %>

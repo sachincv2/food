@@ -1,3 +1,4 @@
+<!-- [PR]: This file is not properly indented -->
 <div class="caro" >
   <button type="button" class="btn btn-light explore-btn"><a class="border-a" href="#">EXPLORE</a></button> 
   <%= image_tag("mainback2.jpg", :alt => "rss feed",  :class => "carimage") %>
@@ -15,6 +16,8 @@
     <div class="category-block">
         <div class="row ">
           <% @categories.each do |category| %>
+          <!-- [PR]: Why do you have two separate link tags here? Can you reduce this to one? -->
+          <!-- [PR]: Here again the entire card should be clickable -->
               <div class="col-md-12 col-sm-12 col-lg-4 border">
                 <div>
                 <%= link_to image_tag(category.category_image), category_path(category) %>
@@ -30,11 +33,14 @@
     <div class="band center-band-head">
       <div>
         <h3 class="band-heads">OUR RECOMMENDATIONS</h3>
+        <!-- [PR]: Instead of leaving this section empty, can you just randomly pick two or three categories and display here? -->
+        <!-- Don't hardcode anything. It's okay if categories change on page refresh. -->
       </div>    
     </div>
 </div>
 <footer>
 <div>
+<!-- [PR]: This should be present in every page and the ideal place to have this is in the navbar -->
 <% if user_signed_in? %>
         <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
         <% else %>

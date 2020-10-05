@@ -1,3 +1,5 @@
+# [PR]: This file is not properly indented.
+# [PR]: It's a good practice to add some info about the gem which you're adding here. This saves other developer's time in understanding what a particular gem does.
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 

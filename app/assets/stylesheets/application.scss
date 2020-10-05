@@ -12,15 +12,26 @@
  *
 
  */
+
+// [PR]: This file is not properly indented
+/* [PR]: Some class names have typos in them. Please correct.
+* CSS class names should be easy to read and understand
+* Go through this guide(http://getbem.com) on how to name CSS classes
+*/
+
  @import "bootstrap";
  @import "font-awesome-sprockets";
  @import "font-awesome";
 
 body{
+    // [PR]: Try to use HEX values for assigning colors
+    // RGB representations are somewhat hard to read through and are outperformed by HEX
     background-color: rgb(247, 249, 250);
 }
 .main{
     background-color: white;
+    // [PR]: Why are you harcoding width here? You should avoid hardcoding width values as it breaks the responsiveness of your site.
+    // Use Bootstrap containers instead
     max-width:981px;
     color: #212426;
 }
@@ -121,6 +132,7 @@ body h2{
     padding: 0;
 }
 .login-form-css{
+    // [PR]: Another width hardcoding. Please correct.
     max-width: 600px;
     margin: auto;
     text-align: center;
@@ -166,9 +178,14 @@ header nav{
     height: 78px;
 }
 .field{
+    /* [PR]: If a CSS class just includes `padding` or `margin` styles, use bootstrap spacing helpers instead of defining a new class.
+    * Try to use bootstrap as much as possible
+    * Have a look at https://getbootstrap.com/docs/4.5/utilities/spacing
+    */
     margin-top: 10px;
 }
 .actions{
+    // [PR]: Same as above. Try and use bootstrap classes.
     margin-top: 10px;
 }
 .alert{

@@ -1,7 +1,9 @@
+<!-- [PR]: This file is not correctly indented -->
 <div class="container cat-page">
     <div class="row">
         <% @recipies.each do |recipie| %>
                 <div class="col-md-12 col-sm-12 col-lg-12 cat-col">
+                    <!-- [PR]: A good UX here is to make this entire card clickable and not just the button -->
                     <div class="card" style="width: 100%;">
                         <div class="card-body">
                             <h5 class="card-title"><%= recipie.recipie_name %></h5>
