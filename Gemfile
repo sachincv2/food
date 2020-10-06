@@ -1,5 +1,4 @@
 # [PR]: This file is not properly indented.
-# [PR]: It's a good practice to add some info about the gem which you're adding here. This saves other developer's time in understanding what a particular gem does.
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -28,6 +27,7 @@ gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'jquery-rails'
 
 gem 'font-awesome-sass', '~> 5.13.0'
+#used to get icons and styles
 
 gem 'devise'
 

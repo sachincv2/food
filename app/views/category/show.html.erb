@@ -1,19 +1,16 @@
-
 <div class="container cat-page">
     <div class="row">
         <% @recipies.each do |recipie| %>
-                <div class="col-md-12 col-sm-12 col-lg-12 cat-col">
-                    <!-- [PR]: A good UX here is to make this entire card clickable and not just the button -->
-                    <!-- So here i wanted the to display the recipie_description , so i thought only button must be clickable -->
-                    <div class="card" style="width: 100%;">
-                        <div class="card-body">
-                            <h5 class="card-title"><%= recipie.recipie_name %></h5>
-                            <p class="card-text"><%= recipie.recipie_description %></p>
-                            <button type="button" class="btn btn-primary"><%= link_to 'Show', recipie_path(recipie), class: "cat-btn"  %></button>
-                        </div>
-                    </div>
+        <div class="col-md-12 col-sm-12 col-lg-12 cat-col">
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title"><%= recipie.recipie_name %></h5>
+                    <p class="card-text"><%= recipie.recipie_description %></p>
+                    <button type="button"
+                        class="btn btn-primary"><%= link_to 'Show', recipie_path(recipie), class: "cat-btn"  %></button>
                 </div>
+            </div>
+        </div>
         <% end %>
     </div>
 </div>
-

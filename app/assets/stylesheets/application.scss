@@ -13,94 +13,101 @@
 
  */
 
-// [PR]: This file is not properly indented
-/* [PR]: Some class names have typos in them. Please correct.
-* CSS class names should be easy to read and understand
-* Go through this guide(http://getbem.com) on how to name CSS classes
-*/
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
- @import "bootstrap";
- @import "font-awesome-sprockets";
- @import "font-awesome";
-
-body{
-    // [PR]: Try to use HEX values for assigning colors
-    // RGB representations are somewhat hard to read through and are outperformed by HEX
+body {
     background-color: F7F9FA;
 }
-.main{
+
+.main {
     background-color: white;
-    // [PR]: Why are you harcoding width here? You should avoid hardcoding width values as it breaks the responsiveness of your site.
-    // Use Bootstrap containers instead
-    max-width:981px;
+    max-width: 55%;
     color: #212426;
 }
-.l{
+
+.l {
     display: inline-flex;
 }
-.p{
+
+.p {
     padding: 15px 80px 10px 80px;
 }
-body p{
-    font-size:20px;
-    margin-top : 10px;
+
+body p {
+    font-size: 20px;
+    margin-top: 10px;
 }
-body h2{
-   font-size:30px; 
+
+body h2 {
+    font-size: 30px;
 }
-.name{
-    text-align:center;
-    font-size:60px;
-    margin-bottom:0;
+
+.name {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 0;
 }
-.likes{
-    text-align:center;
-    margin-top:0;
-    position:relative;
-    top:-10px;
-    margin-right:20px;
-    font-size:17px;
+
+.likes {
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    top: -10px;
+    margin-right: 20px;
+    font-size: 17px;
 }
-.main-home{
-    max-width:78%;
+
+.main-home {
+    max-width: 78%;
     margin: auto;
 
 }
-.caro{
+
+.caro {
     height: 550px;
     background-image: url(mainback2.jpg);
 }
-.footer{
+
+.footer {
     height: 200px;
     background-color: #343a40;
 }
-.center-band-head{
+
+.center-band-head {
     text-align: center;
     padding: 12px
 }
-.cat-row{
+
+.cat-row {
     height: 350px;
 }
-.home-head{
+
+.home-head {
     margin-top: 8px;
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
-    color:black;
+    color: #000000;
     font-size: calc(1.3rem + 0.6vw);
-  
+
 }
-.link-col{
+
+.link-col {
     text-decoration: none;
 }
-.link-col h3:hover{
-    color: blue($color: #000000);
+
+.link-col h3:hover {
+    color: #0000FF;
 }
-.band-heads{
-    color: white;
+
+.band-heads {
+    color: #FFFFFF;
 }
-.explore-btn{
+
+.explore-btn {
     position: absolute;
     top: 49%;
     left: 45%;
@@ -109,114 +116,130 @@ body h2{
     font-size: 27px;
     padding: 9px;
 }
-.styleimage{
-    height:350px;
-    width:100%;
+
+.styleimage {
+    height: 350px;
+    width: 100%;
     margin: auto;
     display: block;
-    border : 1px solid black;
-    padding:1px;
+    border: 1px solid black;
+    padding: 1px;
     border-radius: 30px;
 }
-.border img{
+
+.border img {
     height: 300px;
     width: 100%;
 }
-.band{
+
+.band {
     height: 60px;
     background-color: #343a40;
     margin-top: 10px;
-    
+
 }
-.band-row{
+
+.band-row {
     text-align: center;
     color: white;
     height: inherit;
 }
-.band-col{
+
+.band-col {
     margin: auto;
     padding: 0;
 }
-.login-form-css{
-    // [PR]: Another width hardcoding. Please correct.
-    max-width: 600px;
+
+.login-form-css {
+    max-width: 36%;
     margin: auto;
     text-align: center;
     margin-top: 7%;
-    box-shadow: 
-    0 0 1px rgba(0, 0, 0, 0.3), 
-    0 3px 7px rgba(0, 0, 0, 0.3), 
-    inset 0 1px rgba(255,255,255,1),
-    inset 0 -3px 2px rgba(0,0,0,0.25);
+    box-shadow:
+        0 0 1px rgba(0, 0, 0, 0.3),
+        0 3px 7px rgba(0, 0, 0, 0.3),
+        inset 0 1px rgba(255, 255, 255, 1),
+        inset 0 -3px 2px rgba(0, 0, 0, 0.25);
     height: 450px;
-    
+
 }
-.cat-page{
+
+.cat-page {
     margin-top: 20px;
     padding: 5px;
 }
-.cat-col{
+
+.cat-col {
     margin-bottom: 20px;
 }
-.cat-btn{
+
+.cat-btn {
     color: white;
     text-decoration: none;
 }
-.cat-btn:hover{
+
+.cat-btn:hover {
     color: white;
 }
-.heads-up{
+
+.heads-up {
     margin-bottom: 20px;
 }
-.form-control{
+
+.form-control {
     margin: auto;
     width: 80%;
 }
-.login-inner{
+
+.login-inner {
     padding: 70px;
 }
-footer{
+
+footer {
     height: 400px;
     background-color: #343a40;
     margin-top: 20px;
 }
-header nav{
+
+header nav {
     height: 78px;
 }
-.field{
-    /* [PR]: If a CSS class just includes `padding` or `margin` styles, use bootstrap spacing helpers instead of defining a new class.
-    * Try to use bootstrap as much as possible
-    * Have a look at https://getbootstrap.com/docs/4.5/utilities/spacing
-    */
+
+.field {
     margin-top: 10px;
 }
-.actions{
-    // [PR]: Same as above. Try and use bootstrap classes.
+
+.actions {
     margin-top: 10px;
 }
-.alert{
+
+.alert {
     text-align: center;
     padding: 0;
 }
-.border-a{
+
+.border-a {
     text-decoration: none;
     color: black;
-   
+
 }
-.carimage{
-    height:550px;
-    width:100%;
+
+.carimage {
+    height: 550px;
+    width: 100%;
     margin: auto;
     display: block;
-    padding:1px;
+    padding: 1px;
 }
-.category-block{
+
+.category-block {
     padding: 10px;
     margin: auto;
 }
-.border{
-    border:1px solid #e3e8ed;
-    background-color:#D0D0D0;
+
+.border {
+    border: 1px solid #e3e8ed;
+    background-color: #D0D0D0;
     box-shadow: 5px 10px 18px #888888;
     text-align: center;
     display: flex;
@@ -225,110 +248,134 @@ header nav{
     margin-bottom: 20px;
 
 }
-.displaytime{
+
+.displaytime {
     display: flex;
     flex-direction: row;
 }
-.displaytime .likes{
+
+.displaytime .likes {
     left: 77%;
     position: relative;
 }
-.displaytime button{
-width:90px;
-height:30px;
+
+.displaytime button {
+    width: 90px;
+    height: 30px;
 }
-.stepimage{
-    display:block;
+
+.stepimage {
+    display: block;
 }
-.space{
+
+.space {
     padding-left: 12px;
 }
-.IE{
-    margin-top:40px;
-    margin-bottom:40px;
+
+.IE {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-.innerstepblock button{
-    margin-top:10px
+
+.innerstepblock button {
+    margin-top: 10px
 }
-.likesandcom{
+
+.likesandcom {
     display: inline-flex;
     width: 100%;
-    justify-content:center;
+    justify-content: center;
     color: #7a8e9d;
 }
-.c{
-    border:1px solid #e3e8ed;
-    padding:5px 5px 5px 10px;
+
+.c {
+    border: 1px solid #e3e8ed;
+    padding: 5px 5px 5px 10px;
 }
-.c h2{
-    border-bottom:1px solid #e3e8ed;
-    padding-bottom:7px;
+
+.c h2 {
+    border-bottom: 1px solid #e3e8ed;
+    padding-bottom: 7px;
 
 }
-.metadata{
-    border:2px solid #e3e8ed;
+
+.metadata {
+    border: 2px solid #e3e8ed;
     border-radius: 4px;
     padding: 5px;
     color: #212426;
     font-weight: 400;
     font-size: 16px;
 }
-.stepdesc{
+
+.stepdesc {
     height: 300px;
-    
+
 }
-.heads{
+
+.heads {
     font-size: 22px;
     color: #212426;
     text-transform: uppercase;
 }
-.desc{
+
+.desc {
     color: #525d66;
     font-weight: 300;
     font-size: 24px;
 
 }
-.stitle{
+
+.stitle {
     font-size: 22px;
     font-weight: 400;
     text-transform: lowercase;
 }
-.row-divider{
-    background-color:#e3e8ed ;
+
+.row-divider {
+    background-color: #e3e8ed;
     height: 1px;
     width: 68%;
 }
-.cog{
+
+.cog {
     color: #1c1e20;
 }
-.cog1{
+
+.cog1 {
     color: #1975f1;
 }
-.cog2{
+
+.cog2 {
     color: #f9c03e;
 
 }
-.steptitle{
+
+.steptitle {
     padding: 5px;
     margin-bottom: 20px;
 }
-.stepaside{
-    height:300px;
+
+.stepaside {
+    height: 300px;
 }
-.gap{
+
+.gap {
     margin-bottom: 30px;
 }
 
-.lc{
+.lc {
     margin-bottom: 0;
 }
-.lc p{
+
+.lc p {
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 11px 11px 11px 0px;    
+    padding: 11px 11px 11px 0px;
 }
-.llc{
+
+.llc {
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -336,24 +383,29 @@ height:30px;
     font-size: 21px;
     font-weight: 500;
 }
-.cblock{
+
+.cblock {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 
 }
-.divider{
+
+.divider {
     display: inline-flex;
     align-items: center;
 }
-.upload-form{
+
+.upload-form {
     text-align: center;
     margin-top: 50px;
     background-color: white;
 }
-.upload-form-head{
+
+.upload-form-head {
     padding: 10px;
 }
-.upload-form .row-divider{
+
+.upload-form .row-divider {
     width: 100%;
 }

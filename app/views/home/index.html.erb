@@ -1,58 +1,61 @@
-
-<div class="caro" >
-  <button type="button" class="btn btn-light explore-btn"><a class="border-a" href="#">EXPLORE</a></button> 
-  <%= image_tag("mainback2.jpg", :alt => "rss feed",  :class => "carimage") %>
+<div class="caro">
+    <button type="button" class="btn btn-light explore-btn"><a class="border-a" href="#">EXPLORE</a></button>
+    <%= image_tag("mainback2.jpg", :alt => "rss feed",  :class => "carimage") %>
 </div>
 <div class="main-home">
 
     <div class="band">
-      <div class="row band-row">
-        <div class="col-4 band-col"><h3>EXPLORE</h3></div>
-        <div class="col-4 band-col"><h3>COOK</h3></div>
-        <div class="col-4 band-col"><h3>REPEAT</h3></div>
-      </div>
+        <div class="row band-row">
+            <div class="col-4 band-col">
+                <h3>EXPLORE</h3>
+            </div>
+            <div class="col-4 band-col">
+                <h3>COOK</h3>
+            </div>
+            <div class="col-4 band-col">
+                <h3>REPEAT</h3>
+            </div>
+        </div>
     </div>
 
     <div class="category-block">
         <div class="row ">
-          <% @categories.each do |category| %>
-              <div class="col-md-12 col-sm-12 col-lg-4 border">
-              <%= link_to(category_path(category), :class => "link-col") do %>
-                  <div>
+            <% @categories.each do |category| %>
+            <div class="col-md-12 col-sm-12 col-lg-4 border">
+                <%= link_to(category_path(category), :class => "link-col") do %>
+                <div>
                     <%= image_tag(category.category_image) %>
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <h3 class="home-head"><%= category.category_name %></h3>
-                  </div>
-                  <% end %>
-              </div>
-          <% end %>
+                </div>
+                <% end %>
+            </div>
+            <% end %>
         </div>
     </div>
 
     <div class="band center-band-head">
-      <div>
-        <h3 class="band-heads">OUR RECOMMENDATIONS</h3>
-      </div>    
+        <div>
+            <h3 class="band-heads">OUR RECOMMENDATIONS</h3>
+        </div>
     </div>
 
     <div class="category-block">
         <div class="row ">
-          <% @twocategories.each do |category| %>
-              <div class="col-md-12 col-sm-12 col-lg-4 border">
-                  <div>
+            <% @twocategories.each do |category| %>
+            <div class="col-md-12 col-sm-12 col-lg-4 border">
+                <div>
                     <%= link_to image_tag(category.category_image), category_path(category) %>
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <%= link_to category.category_name, category_path(category, :title => category.category_name), :class => "home-head" %>
-                  </div>
-              </div>
-          <% end %>
+                </div>
+            </div>
+            <% end %>
         </div>
     </div>
 
 </div>
 <footer>
 </footer>
-
-
