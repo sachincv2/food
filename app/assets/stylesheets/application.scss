@@ -13,7 +13,6 @@
 
  */
 
-// [PR]: Some class names are not in readable format. Please correct.
 
 @import "bootstrap";
 @import "font-awesome-sprockets";
@@ -69,8 +68,7 @@ body h2 {
 
 }
 
-// [PR]: Fix typo
-.caro {
+.home-top-div {
     height: 550px;
     background-image: url(mainback2.jpg);
 }
