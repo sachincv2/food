@@ -30,6 +30,7 @@ gem 'font-awesome-sass', '~> 5.13.0'
 #used to get icons and styles
 
 gem 'devise'
+#devise helps authenticating users with its built in methods and provides helpers to get currentuser and his details taken during registrations
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
