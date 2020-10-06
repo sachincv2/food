@@ -45,6 +45,7 @@
         <div class="row ">
             <% @twocategories.each do |category| %>
             <div class="col-md-12 col-sm-12 col-lg-4 border">
+            <!-- [PR]: Link tags are again repeated here -->
                 <div>
                     <%= link_to image_tag(category.category_image), category_path(category) %>
                 </div>

@@ -13,6 +13,8 @@
 
  */
 
+// [PR]: Some class names are not in readable format. Please correct.
+
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -27,10 +29,12 @@ body {
     color: #212426;
 }
 
+// [PR]: Rename class here
 .l {
     display: inline-flex;
 }
 
+// [PR]: Rename class here
 .p {
     padding: 15px 80px 10px 80px;
 }
@@ -65,6 +69,7 @@ body h2 {
 
 }
 
+// [PR]: Fix typo
 .caro {
     height: 550px;
     background-image: url(mainback2.jpg);
@@ -288,11 +293,13 @@ header nav {
     color: #7a8e9d;
 }
 
+// [PR]: Rename class here
 .c {
     border: 1px solid #e3e8ed;
     padding: 5px 5px 5px 10px;
 }
 
+// [PR]: Rename class here
 .c h2 {
     border-bottom: 1px solid #e3e8ed;
     padding-bottom: 7px;
@@ -338,14 +345,17 @@ header nav {
     width: 68%;
 }
 
+// [PR]: Rename class here or use bootstrap color classes
 .cog {
     color: #1c1e20;
 }
 
+// [PR]: Rename class here or use bootstrap color classes
 .cog1 {
     color: #1975f1;
 }
 
+// [PR]: Rename class here or use bootstrap color classes
 .cog2 {
     color: #f9c03e;
 
@@ -364,10 +374,12 @@ header nav {
     margin-bottom: 30px;
 }
 
+// [PR]: Rename class here
 .lc {
     margin-bottom: 0;
 }
 
+// [PR]: Rename class here
 .lc p {
     display: flex;
     align-items: center;
@@ -375,6 +387,7 @@ header nav {
     padding: 11px 11px 11px 0px;
 }
 
+// [PR]: Rename class here
 .llc {
     text-align: right;
     display: flex;
