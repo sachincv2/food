@@ -3,7 +3,7 @@ class RecipieController < ApplicationController
   def show
     @recipie = Recipie.find(params[:id])
     @steps = @recipie.steps
-    @recipie_skills = @recipie.skills
+    @recipie_ingredients = @recipie.ingredients
     @recipie_equipments =@recipie.equipments
   end
 end
