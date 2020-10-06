@@ -1,4 +1,4 @@
-<!-- [PR]: This file is not properly indented -->
+
 <div class="caro" >
   <button type="button" class="btn btn-light explore-btn"><a class="border-a" href="#">EXPLORE</a></button> 
   <%= image_tag("mainback2.jpg", :alt => "rss feed",  :class => "carimage") %>
@@ -16,15 +16,15 @@
     <div class="category-block">
         <div class="row ">
           <% @categories.each do |category| %>
-          <!-- [PR]: Why do you have two separate link tags here? Can you reduce this to one? -->
-          <!-- [PR]: Here again the entire card should be clickable -->
               <div class="col-md-12 col-sm-12 col-lg-4 border">
+              <%= link_to(category_path(category), :class => "link-col") do %>
                   <div>
-                    <%= link_to image_tag(category.category_image), category_path(category) %>
+                    <%= image_tag(category.category_image) %>
                   </div>
                   <div>
-                    <%= link_to category.category_name, category_path(category, :title => category.category_name), :class => "home-head" %>
+                    <h3 class="home-head"><%= category.category_name %></h3>
                   </div>
+                  <% end %>
               </div>
           <% end %>
         </div>

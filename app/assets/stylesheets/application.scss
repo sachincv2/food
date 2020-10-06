@@ -89,8 +89,14 @@ body h2{
     text-decoration: none;
     color:black;
     font-size: calc(1.3rem + 0.6vw);
+  
 }
-
+.link-col{
+    text-decoration: none;
+}
+.link-col h3:hover{
+    color: blue($color: #000000);
+}
 .band-heads{
     color: white;
 }
