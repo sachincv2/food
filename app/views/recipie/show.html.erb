@@ -3,9 +3,9 @@
         <h1 class="name"> <%= @recipie.recipie_name %> </h1>
     </div>
     <div class="likesandcom">
-        <p class="likes"><i class="far fa-thumbs-up cog1"></i><span class="space">Likes :</span>
+        <p class="likes"><i class="far fa-thumbs-up likes-icon"></i><span class="space">Likes :</span>
             <%= @recipie.recipie_likes %></p>
-        <p class="likes"><i class="far fa-comment-alt cog2"></i><span class="space">Comments :</span>
+        <p class="likes"><i class="far fa-comment-alt comments-icon"></i><span class="space">Comments :</span>
             <%= @recipie.recipie_likes %></p>
     </div>
 
@@ -17,7 +17,7 @@
             <div class="row metadata">
                 <div class="col mb-0">
                     <p class="left-metadata">
-                        <i class="far fa-clock cog"></i>
+                        <i class="far fa-clock icon-color"></i>
                         <span class="space"> Time</span>
                     </p>
                 </div>
@@ -28,18 +28,18 @@
             <div class="row metadata">
                 <div class="col mb-0">
                     <p class="left-metadata">
-                        <i class="fas fa-bars cog"></i>
+                        <i class="fas fa-bars icon-color"></i>
                         <span class="space">Steps</span>
                     </p>
                 </div>
-                <div class="col mb-0 right-metadata cog">
+                <div class="col mb-0 right-metadata icon-color">
                     <%= @steps.count %>
                 </div>
             </div>
             <div class="row metadata">
                 <div class="col mb-0">
                     <p class="left-metadata">
-                        <i class="far fa-clipboard cog"></i>
+                        <i class="far fa-clipboard icon-color"></i>
                         <span class="space"> Difficulty</span>
                     </p>
                 </div>
