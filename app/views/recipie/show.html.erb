@@ -4,8 +4,6 @@
       <h1 class="name"> <%= @recipie.recipie_name %> </h1>
   </div>
   <div class="likesandcom">
-    <!-- [PR]: You should display 0 in the UI, if `@recipie.recipie_likes` is nil -->
-    <!-- An ideal way to do this is to make the default value of the DB column to be 0, so that you don't have to handle these cases. But just hardcoding in UI is fine for now. -->
       <p class="likes"><i class="far fa-thumbs-up cog1"></i><span class="space">Likes :</span> <%= @recipie.recipie_likes %></p>
       <p class="likes"><i class="far fa-comment-alt cog2"></i><span class="space">Comments :</span> <%= @recipie.recipie_likes %></p>
   </div>
