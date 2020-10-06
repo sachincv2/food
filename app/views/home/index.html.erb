@@ -45,13 +45,14 @@
         <div class="row ">
             <% @twocategories.each do |category| %>
             <div class="col-md-12 col-sm-12 col-lg-4 border">
-            <!-- [PR]: Link tags are again repeated here -->
+                <%= link_to(category_path(category), :class => "link-col") do %>
                 <div>
-                    <%= link_to image_tag(category.category_image), category_path(category) %>
+                    <%= image_tag(category.category_image) %>
                 </div>
                 <div>
-                    <%= link_to category.category_name, category_path(category, :title => category.category_name), :class => "home-head" %>
+                    <h3 class="home-head"><%= category.category_name %></h3>
                 </div>
+                <% end %>
             </div>
             <% end %>
         </div>
