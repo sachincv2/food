@@ -2,10 +2,10 @@
     <div>
         <h1 class="name"> <%= @recipie.recipie_name %> </h1>
     </div>
-    <div class="likesandcom">
-        <p class="likes"><i class="far fa-thumbs-up cog1"></i><span class="space">Likes :</span>
+    <div class="likesandcom mt-3">
+        <p class="likes"><i class="far fa-thumbs-up likes-icon"></i><span class="space">Likes :</span>
             <%= @recipie.recipie_likes %></p>
-        <p class="likes"><i class="far fa-comment-alt cog2"></i><span class="space">Comments :</span>
+        <p class="likes"><i class="far fa-comment-alt comments-icon"></i><span class="space">Comments :</span>
             <%= @recipie.recipie_likes %></p>
     </div>
 
@@ -15,56 +15,56 @@
         </div>
         <div class="col-sm-12 col-md-6 ">
             <div class="row metadata">
-                <div class="col lc">
-                    <p>
-                        <i class="far fa-clock cog"></i>
+                <div class="col mb-0">
+                    <p class="left-metadata">
+                        <i class="far fa-clock icon-color"></i>
                         <span class="space"> Time</span>
                     </p>
                 </div>
-                <div class="col lc llc">
+                <div class="col mb-0 right-metadata">
                     <%= @recipie.recipie_time %>min
                 </div>
             </div>
-            <div class="row metadata">
-                <div class="col lc">
-                    <p>
-                        <i class="fas fa-bars cog"></i>
+            <div class="row metadata mt-2">
+                <div class="col mb-0">
+                    <p class="left-metadata">
+                        <i class="fas fa-bars icon-color"></i>
                         <span class="space">Steps</span>
                     </p>
                 </div>
-                <div class="col lc llc cog">
+                <div class="col mb-0 right-metadata icon-color">
                     <%= @steps.count %>
                 </div>
             </div>
-            <div class="row metadata">
-                <div class="col lc">
-                    <p>
-                        <i class="far fa-clipboard cog"></i>
+            <div class="row metadata mt-2">
+                <div class="col mb-0">
+                    <p class="left-metadata">
+                        <i class="far fa-clipboard icon-color"></i>
                         <span class="space"> Difficulty</span>
                     </p>
                 </div>
-                <div class="col lc llc">
+                <div class="col mb-0 right-metadata">
                     <%= @recipie.recipie_difficulty %>
                 </div>
             </div>
         </div>
     </div>
-    <div>
+    <div class="mt-4">
         <h2 class="heads">Description </br></h2>
         <p class="desc"><%= @recipie.recipie_description %></p>
     </div>
     <div class="IE">
         <div class="row">
-            <div class="col-sm-12 col-md-6 c">
+            <div class="col-sm-12 col-md-6 box-border">
                 <h2 class="heads">Ingredients </br></h2>
-                <% @recipie_skills.each do |h| %>
-                <li class="desc"><%= h %></li>
+                <% @recipie_ingredients.each do |h| %>
+                    <li class="desc"><%= h %></li>
                 <% end %>
             </div>
-            <div class="col-sm-12 col-md-6 c">
+            <div class="col-sm-12 col-md-6 box-border">
                 <h2 class="heads">Equipments </br></h2>
                 <% @recipie_equipments.each do |h| %>
-                <li class="desc"><%= h %></li>
+                    <li class="desc"><%= h %></li>
                 <% end %>
             </div>
         </div>
@@ -77,24 +77,38 @@
     <h2 class="gap heads">Steps</h2>
     <% @steps.each do |step| %>
     <div class="row">
-        <h3 class="steptitle heads d-block d-sm-none ">Step <%= step.step_num %> :<span class="stitle">
-                <%= step.step_title %></span></h3>
-        <h3 class="steptitle heads d-none d-sm-block d-md-none d-xs-block">Step <%= step.step_num %> :<span
-                class="stitle"> <%= step.step_title %></span></h3>
+        <h3 class="steptitle heads d-block d-sm-none ">Step <%= step.step_num %> :
+            <span class="stitle">
+                <%= step.step_title %>
+            </span>
+        </h3>    
+        <h3 class="steptitle heads d-none d-sm-block d-md-none d-xs-block">Step <%= step.step_num %> :
+            <span class="stitle">
+                <%= step.step_title %>
+            </span>
+        </h3>
         <div class="col-sm-12 col-md-6">
             <%= image_tag("hot_water.jpg", :alt => "rss feed",  :class => "styleimage") %>
         </div>
         <div class="col-sm-12 col-md-6">
-            <h3 class="steptitle heads d-none d-md-block d-lg-block ">Step <%= step.step_num %> :<span class="stitle">
-                    <%= step.step_title %></span></h3>
-            <p class="desc"><%=  step.step_description %></p>
+            <h3 class="steptitle heads d-none d-md-block d-lg-block ">Step <%= step.step_num %> :
+                <span class="stitle">
+                    <%= step.step_title %>
+                </span>
+            </h3>
+            <p class="desc">
+                <%=  step.step_description %>
+            </p>
         </div>
         <div class="divider">
             <div class=" row-divider"></div>
-            <div class=" cblock"><button type="button" class="btn btn-link"><i class="far fa-comment-alt"></i><span
-                        class="space">Comments</span></button></div>
+            <div class=" cblock">
+                <button type="button" class="btn btn-link">
+                    <i class="far fa-comment-alt"></i>
+                    <span class="space">Comments</span>
+                </button>
+            </div>
         </div>
     </div>
-
     <% end %>
 </div>

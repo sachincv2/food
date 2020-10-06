@@ -13,6 +13,7 @@
 
  */
 
+
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -25,13 +26,14 @@ body {
     background-color: white;
     max-width: 55%;
     color: #212426;
+    margin-top: 10px;
 }
 
-.l {
+.navbar-search {
     display: inline-flex;
 }
 
-.p {
+.navbar-padding {
     padding: 15px 80px 10px 80px;
 }
 
@@ -65,7 +67,7 @@ body h2 {
 
 }
 
-.caro {
+.home-top-div {
     height: 550px;
     background-image: url(mainback2.jpg);
 }
@@ -288,12 +290,12 @@ header nav {
     color: #7a8e9d;
 }
 
-.c {
+.box-border {
     border: 1px solid #e3e8ed;
     padding: 5px 5px 5px 10px;
 }
 
-.c h2 {
+.box-border h2 {
     border-bottom: 1px solid #e3e8ed;
     padding-bottom: 7px;
 
@@ -338,17 +340,16 @@ header nav {
     width: 68%;
 }
 
-.cog {
+.icon-color {
     color: #1c1e20;
 }
 
-.cog1 {
+.likes-icon {
     color: #1975f1;
 }
 
-.cog2 {
+.comments-icon {
     color: #f9c03e;
-
 }
 
 .steptitle {
@@ -364,10 +365,6 @@ header nav {
     margin-bottom: 30px;
 }
 
-.lc {
-    margin-bottom: 0;
-}
-
 .lc p {
     display: flex;
     align-items: center;
@@ -375,7 +372,7 @@ header nav {
     padding: 11px 11px 11px 0px;
 }
 
-.llc {
+.right-metadata {
     text-align: right;
     display: flex;
     flex-direction: column;

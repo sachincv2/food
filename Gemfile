@@ -22,12 +22,15 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
  gem 'bcrypt', '~> 3.1.7'
+ 
+ #bootstrap and jquery are required for styling .Bootstrap provides huge variety of styling classes 
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'jquery-rails'
-
-gem 'font-awesome-sass', '~> 5.13.0'
 #used to get icons and styles
+gem 'font-awesome-sass', '~> 5.13.0'
+
+#devise helps authenticating users with its built in methods and provides helpers to get currentuser and his details taken during registrations
 
 gem 'devise'
 
