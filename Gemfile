@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
  gem 'bcrypt', '~> 3.1.7'
+ 
+ #bootstrap and jquery are required for styling .Bootstrap provides huge variety of styling classes 
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'jquery-rails'
