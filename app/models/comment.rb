@@ -1,3 +1,4 @@
 class Comment < ApplicationRecord
-    belongs_to :steps
+    belongs_to :step
+    belongs_to :user
 end

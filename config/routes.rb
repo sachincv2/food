@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :category
   get 'home/dashboard'
   resources :upload
+  resources :comments
 end

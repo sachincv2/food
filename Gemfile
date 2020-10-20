@@ -33,6 +33,8 @@ gem 'font-awesome-sass', '~> 5.13.0'
 #devise helps authenticating users with its built in methods and provides helpers to get currentuser and his details taken during registrations
 
 gem 'devise'
+gem 'react-rails'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
