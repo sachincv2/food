@@ -25,13 +25,6 @@ class RecipeIndex extends React.Component {
             })
 
         }
-        axios({
-            method: 'POST',
-            url: '/comments',
-            data: {
-                recipie_likes: this.state.likes
-            }
-        }).then(data => console.log(data));
 
     }
     render() {
