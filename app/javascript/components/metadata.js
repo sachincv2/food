@@ -1,25 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-class MetaData extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    //
-    render() {
-        return (
-
-            <div className="row metadata mt-2">
-                <div className="col mb-0">
-                    <p className="left-metadata">
-                        <i className={this.props.icon}></i>
-                        <span className="space"> {this.props.heading}</span>
-                    </p>
-                </div>
-                <div className="col mb-0 right-metadata">
-                    {this.props.data}
-                </div>
+function MetaData({ icon, heading, data }) {
+    return (
+        <div className="row metadata mt-2">
+            <div className="col mb-0">
+                <p className="left-metadata">
+                    <i className={icon}></i>
+                    <span className="space"> {heading}</span>
+                </p>
             </div>
-        );
-    }
+            <div className="col mb-0 right-metadata">
+                {data}
+            </div>
+        </div>
+    );
 }
 export default MetaData
