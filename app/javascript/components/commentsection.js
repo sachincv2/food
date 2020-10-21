@@ -8,7 +8,6 @@ class CommentSection extends React.Component {
         super(props)
         this.state = {
             list: [],
-            len: 0,
             user: ""
         }
         this.handleComments = this.handleComments.bind(this)
@@ -40,15 +39,14 @@ class CommentSection extends React.Component {
         })
         // console.log(this.props.user)
         var commentlist = []
-        this.props.comments[0].forEach(element => {
+        this.props.comments.forEach(element => {
             var getuserID
             if (element.step_id == this.props.step.id) {
                 getuserID = this.user(element.user_id)
                 commentlist.push({ comment: element.comment_text, user: getuserID })
             }
             this.setState({
-                list: commentlist,
-                len: commentlist.length + 1
+                list: commentlist
             })
         });
     }
@@ -59,7 +57,7 @@ class CommentSection extends React.Component {
         return (
             <div className="comment-section">
                 <CommentList data={this.state.list}></CommentList>
-                <CommentForm step={this.props.step} len={this.state.len} count={this.props.comments} handleComments={this.handleComments} addComments={this.addComments} user={this.props.user} ></CommentForm>
+                <CommentForm step={this.props.step} count={this.props.comments} handleComments={this.handleComments} addComments={this.addComments} user={this.props.user} ></CommentForm>
             </div>
         );
     }

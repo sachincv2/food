@@ -29,8 +29,8 @@ class RecipeIndex extends React.Component {
     }
     render() {
         var recipieDetails = this.props.recipies
-        var steps = this.props.steps
-        var comments = this.props.comments
+        var steps = this.props.recipies.steps
+        var comments = this.props.recipies.comments
         return (
             <div className="container main">
                 <div><h1 className="name"> {recipieDetails.recipie_name} </h1></div>
@@ -76,7 +76,7 @@ class RecipeIndex extends React.Component {
                 <br></br>
                 <h2 className="gap heads">Steps</h2>
                 {steps.map((step, index) =>
-                    <Step step={step} key={index} comments={comments} user={this.props.user} users={this.props.users}></Step>
+                    <Step step={step} key={index} comments={comments[index]} user={this.props.user} users={this.props.users}></Step>
                 )}
             </div >
 

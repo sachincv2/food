@@ -5,8 +5,8 @@ class RecipieController < ApplicationController
     @steps = @recipie.steps
     @comments = []
     @steps.each do |step|
-      @comments << step.comments
-    end     
+      @comments << step.comments.order("created_at")
+    end  
     @users = User.all
     @recipie_ingredients = @recipie.ingredients
     @recipie_equipments =@recipie.equipments
@@ -18,6 +18,8 @@ class RecipieController < ApplicationController
       "recipie_ingredients"=>@recipie_ingredients,
       "recipie_equipments"=>@recipie_equipments,
       "recipie_difficulty"=>@recipie.recipie_difficulty,
-      "recipie_skills"=>@recipie.recipie_skills]
+      "recipie_skills"=>@recipie.recipie_skills,
+      "steps"=>@steps,
+      "comments"=>@comments]
   end
 end

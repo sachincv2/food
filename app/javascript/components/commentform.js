@@ -32,7 +32,6 @@ class CommentForm extends React.Component {
             method: 'POST',
             url: '/comments',
             data: {
-                comment_num: this.props.len,
                 comment_text: t,
                 step_id: this.props.step.id,
                 user_id: this.props.user.id
@@ -47,7 +46,7 @@ class CommentForm extends React.Component {
             <form className="comment-form" onSubmit={this.handleClick} >
                 <div className="input-group">
                     <textarea className="form-control mb-3 mt-3" aria-label="With textarea" placeholder="enter comment" onChange={this.handleChange} name="text" value={this.state.text}></textarea></div>
-                <div className="mb-3"><button type="submit" class="btn btn-primary" /*onClick={this.handleClick}*/ >Add Comment</button></div>
+                <div className="mb-3"><button type="submit" className="btn btn-primary" /*onClick={this.handleClick}*/ >Add Comment</button></div>
             </form>
         );
     }
