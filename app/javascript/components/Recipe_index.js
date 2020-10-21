@@ -78,7 +78,6 @@ class RecipeIndex extends React.Component {
                 {steps.map((step, index) =>
                     <Step step={step} key={index} comments={comments} user={this.props.user} users={this.props.users}></Step>
                 )}
-                <div style={{ height: "200px" }}></div>
             </div >
 
         );
