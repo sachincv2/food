@@ -7,7 +7,6 @@ class RecipieController < ApplicationController
     @steps.each do |step|
       @comments << step.comments
     end     
-    @currentuser = current_user
     @users = User.all
     @recipie_ingredients = @recipie.ingredients
     @recipie_equipments =@recipie.equipments
