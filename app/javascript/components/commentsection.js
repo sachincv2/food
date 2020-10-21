@@ -34,13 +34,13 @@ class CommentSection extends React.Component {
         return getusername
     }
     handleComments() {
-        console.log(this.props.user)
+        // console.log(this.props.user)
         this.setState({
             user: this.props.user.username
         })
-        console.log(this.props.user)
+        // console.log(this.props.user)
         var commentlist = []
-        this.props.comments.forEach(element => {
+        this.props.comments[0].forEach(element => {
             var getuserID
             if (element.step_id == this.props.step.id) {
                 getuserID = this.user(element.user_id)

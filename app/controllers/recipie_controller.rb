@@ -3,7 +3,10 @@ class RecipieController < ApplicationController
   def show
     @recipie = Recipie.find(params[:id])  
     @steps = @recipie.steps
-    @comments = Comment.all
+    @comments = []
+    @steps.each do |step|
+      @comments << step.comments
+    end     
     @currentuser = current_user
     @users = User.all
     @recipie_ingredients = @recipie.ingredients
