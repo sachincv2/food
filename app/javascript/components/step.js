@@ -14,18 +14,18 @@ class Step extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            click: false
+            showComments: false
         }
         this.handleClick = this.handleClick.bind(this)
     }
     handleClick() {
         this.setState({
-            click: !this.state.click
+            showComments: !this.state.showComments
         })
     }
     render() {
         var step = this.props.step
-        if (this.state.click) {
+        if (this.state.showComments) {
             var commentSection = <CommentSection step={step} comments={this.props.comments} user={this.props.user} users={this.props.users} ></CommentSection>
 
         }
