@@ -4,8 +4,6 @@ import hotwater from "/home/sachin/food/app/assets/images/hot_water.jpg"
 import CommentSection from "./commentsection"
 
 class Step extends React.Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -14,9 +12,9 @@ class Step extends React.Component {
         this.handleClick = this.handleClick.bind(this)
     }
     handleClick() {
-        this.setState({
-            showComments: !this.state.showComments
-        })
+        this.setState((state) => ({
+            showComments: !state.showComments
+        }))
     }
     render() {
         var step = this.props.step
