@@ -2,8 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import CommentList from "./commentlist"
 import CommentForm from "./commentform"
-// var comments = this.props.comments
-// var step = this.props.step
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -27,8 +25,6 @@ class CommentSection extends React.Component {
         })
     }
     user(userId) {
-        // console.log(this.props.users)
-        // console.log(userId)
         var getusername;
         this.props.users.forEach(user => {
             if (user.id == userId) {
@@ -50,7 +46,6 @@ class CommentSection extends React.Component {
                 getuserID = this.user(element.user_id)
                 commentlist.push({ comment: element.comment_text, user: getuserID })
             }
-            // console.log(c)
             this.setState({
                 list: commentlist,
                 len: commentlist.length + 1

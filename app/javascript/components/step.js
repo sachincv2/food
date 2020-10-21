@@ -2,11 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import hotwater from "/home/sachin/food/app/assets/images/hot_water.jpg"
 import CommentSection from "./commentsection"
-// var step = this.props.step
-// var comments = this.props.comments
-// var c = []
-
-
 
 class Step extends React.Component {
 
