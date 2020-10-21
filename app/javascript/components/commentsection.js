@@ -29,13 +29,13 @@ class CommentSection extends React.Component {
     user(userId) {
         // console.log(this.props.users)
         // console.log(userId)
-        var r;
+        var getusername;
         this.props.users.forEach(user => {
             if (user.id == userId) {
-                r = user.username
+                getusername = user.username
             }
         })
-        return r
+        return getusername
     }
     handleComments() {
         console.log(this.props.user)
@@ -43,18 +43,17 @@ class CommentSection extends React.Component {
             user: this.props.user.username
         })
         console.log(this.props.user)
-        var c = []
+        var commentlist = []
         this.props.comments.forEach(element => {
-            var t
+            var getuserID
             if (element.step_id == this.props.step.id) {
-                t = this.user(element.user_id)
-                // console.log(t)
-                c.push({ comment: element.comment_text, user: t })
+                getuserID = this.user(element.user_id)
+                commentlist.push({ comment: element.comment_text, user: getuserID })
             }
             // console.log(c)
             this.setState({
-                list: c,
-                len: c.length + 1
+                list: commentlist,
+                len: commentlist.length + 1
             })
         });
     }

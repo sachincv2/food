@@ -26,7 +26,7 @@ class Step extends React.Component {
     render() {
         var step = this.props.step
         if (this.state.click) {
-            var d = <CommentSection step={step} comments={this.props.comments} user={this.props.user} users={this.props.users} ></CommentSection>
+            var commentSection = <CommentSection step={step} comments={this.props.comments} user={this.props.user} users={this.props.users} ></CommentSection>
 
         }
 
@@ -64,7 +64,7 @@ class Step extends React.Component {
                         </button>
                     </div>
                 </div>
-                {d}
+                {commentSection}
             </div>
         );
     }
