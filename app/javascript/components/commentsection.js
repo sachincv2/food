@@ -37,7 +37,6 @@ class CommentSection extends React.Component {
             user: this.props.user.username
         })
         var commentlist = []
-        console.log(this.props.comments)
         this.props.comments.forEach(element => {
             var getuserID
             getuserID = this.user(element.user_id)
@@ -53,7 +52,8 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div className="comment-section">
-                <CommentList data={this.state.list}></CommentList>
+                {this.state.list.map((i, index) =>
+                    <CommentList data={i}></CommentList>)}
                 <CommentForm step={this.props.step} count={this.props.comments} handleComments={this.handleComments} addComments={this.addComments} user={this.props.user} ></CommentForm>
             </div>
         );

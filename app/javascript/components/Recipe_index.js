@@ -25,18 +25,12 @@ class RecipeIndex extends React.Component {
             })
 
         }
-
     }
     render() {
         var recipieDetails = this.props.recipies
         var steps = this.props.recipies.steps
         var comments = this.props.recipies.comments
         var usernames = this.props.recipies.commented_users
-        console.log(usernames)
-        console.log(this.props.users)
-
-        console.log(comments)
-
         return (
             <div className="container main">
                 <div><h1 className="name"> {recipieDetails.recipie_name} </h1></div>
