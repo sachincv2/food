@@ -6,8 +6,13 @@ class RecipieController < ApplicationController
     @comments = []
     @steps.each do |step|
       @comments << step.comments.order("created_at")
-    end  
-    @users = User.all
+    end 
+    @commented_users = []
+    @comments.each do |comment|
+      comment.each do |com|
+        @commented_users << com.user
+      end
+    end
     @recipie_ingredients = @recipie.ingredients
     @recipie_equipments =@recipie.equipments
     @recipe_details= Hash[
@@ -20,6 +25,7 @@ class RecipieController < ApplicationController
       "recipie_difficulty"=>@recipie.recipie_difficulty,
       "recipie_skills"=>@recipie.recipie_skills,
       "steps"=>@steps,
-      "comments"=>@comments]
+      "comments"=>@comments,
+      "commented_users"=>@commented_users]
   end
 end

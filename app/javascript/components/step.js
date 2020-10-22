@@ -18,7 +18,6 @@ class Step extends React.Component {
     }
     render() {
         var step = this.props.step
-        // console.log(step)
         if (this.state.showComments) {
             var commentSection = <CommentSection step={step} comments={this.props.comments} user={this.props.user} users={this.props.users} ></CommentSection>
 
