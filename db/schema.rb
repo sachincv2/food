@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_02_115149) do
+ActiveRecord::Schema.define(version: 2020_10_23_071014) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -50,12 +50,22 @@ ActiveRecord::Schema.define(version: 2020_10_02_115149) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "comment_num"
     t.text "comment_text"
     t.integer "step_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
     t.index ["step_id"], name: "index_comments_on_step_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "recipie_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipie_id"], name: "index_likes_on_recipie_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "recipies", force: :cascade do |t|
@@ -96,6 +106,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_115149) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -104,5 +115,8 @@ ActiveRecord::Schema.define(version: 2020_10_02_115149) do
   add_foreign_key "category_recipies", "categories"
   add_foreign_key "category_recipies", "recipies", column: "recipie_id"
   add_foreign_key "comments", "steps"
+  add_foreign_key "comments", "users"
+  add_foreign_key "likes", "recipies", column: "recipie_id"
+  add_foreign_key "likes", "users"
   add_foreign_key "steps", "recipies", column: "recipie_id"
 end

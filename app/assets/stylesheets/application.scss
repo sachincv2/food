@@ -17,7 +17,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,200;0,400;1,400&display=swap');
 body {
     background-color: F7F9FA;
 }
@@ -41,7 +41,14 @@ body p {
     font-size: 20px;
     margin-top: 10px;
 }
-
+.comment-list{
+    width: 100%;
+    border-bottom: 1px solid #e3e8ed;
+    padding: 5px;
+    color: #525d66;
+    font-size: 14px;
+    font-family: Lato,Arial,sans-serif;
+}
 body h2 {
     font-size: 30px;
 }
@@ -60,7 +67,15 @@ body h2 {
     margin-right: 20px;
     font-size: 17px;
 }
-
+.comment-section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f7f9fa;
+}
+.user-anchor{
+    text-decoration: none;
+    font-size: 14px;
+}
 .main-home {
     max-width: 78%;
     margin: auto;
@@ -71,7 +86,9 @@ body h2 {
     height: 550px;
     background-image: url(mainback2.jpg);
 }
-
+.border:hover {
+    transform: translate3D(0,-1px,0) scale(1.03);
+  }
 .footer {
     height: 200px;
     background-color: #343a40;
@@ -248,6 +265,8 @@ header nav {
     flex-direction: column;
     padding: 0;
     margin-bottom: 20px;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: all .5s ease;
 
 }
 
