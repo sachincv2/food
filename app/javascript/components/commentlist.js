@@ -6,6 +6,7 @@ class CommentList extends React.Component {
     }
     render() {
         return (
+
             <div className="mt-3 comment-list" style={{ display: "inline-flex" }}>
                 <i className="far fa-comment-alt mt-1"></i>
                 <div className="ml-3">

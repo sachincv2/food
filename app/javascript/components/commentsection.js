@@ -13,8 +13,6 @@ class CommentSection extends React.Component {
         this.handleComments = this.handleComments.bind(this)
         this.addComments = this.addComments.bind(this)
         this.user = this.user.bind(this)
-
-
     }
     addComments(text) {
         var name = this.state.user;
@@ -53,7 +51,8 @@ class CommentSection extends React.Component {
         return (
             <div className="comment-section">
                 {this.state.list.map((i, index) =>
-                    <CommentList data={i}></CommentList>)}
+                    <CommentList data={i}></CommentList>
+                )}
                 <CommentForm step={this.props.step} count={this.props.comments} handleComments={this.handleComments} addComments={this.addComments} user={this.props.user} ></CommentForm>
             </div>
         );

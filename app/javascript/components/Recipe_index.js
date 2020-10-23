@@ -4,6 +4,8 @@ import lemon from "/home/sachin/food/app/assets/images/lemonttea.jpg"
 import hotwater from "/home/sachin/food/app/assets/images/hot_water.jpg"
 import MetaData from "./metadata"
 import Step from "./step"
+import axios from "axios";
+
 
 class RecipeIndex extends React.Component {
     constructor(props) {
@@ -14,10 +16,16 @@ class RecipeIndex extends React.Component {
         }
         this.incrementLike = this.incrementLike.bind(this);
     }
-    getDataForDisplay() {
-
-    }
     incrementLike() {
+        axios({
+            method: 'POST',
+            url: `/recipie/${this.props.recipies.id}/likes`,
+            data: {
+                user_id: this.props.user.id
+            }
+        }).then(
+            console.log("success")
+        )
         if (this.state.liked) {
             this.setState({
                 likes: this.state.likes + 1,
@@ -27,6 +35,7 @@ class RecipeIndex extends React.Component {
         }
     }
     render() {
+        console.log(this.props.step_with_its_comments)
         var recipieDetails = this.props.recipies
         var steps = this.props.recipies.steps
         var comments = this.props.recipies.comments
@@ -36,7 +45,7 @@ class RecipeIndex extends React.Component {
                 <div><h1 className="name"> {recipieDetails.recipie_name} </h1></div>
                 <div className="likesandcom mt-3">
                     <p className="likes"><button onClick={this.incrementLike}><i className="far fa-thumbs-up likes-icon"></i></button><span className="space">Likes :</span>
-                        {this.state.likes}
+                        {recipieDetails.likescount}
                     </p>
                     <p className="likes"><i className="far fa-comment-alt comments-icon"></i><span className="space">Comments :</span>
                         {recipieDetails.recipie_likes}</p>

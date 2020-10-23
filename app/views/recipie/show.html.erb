@@ -1,3 +1,8 @@
+
+<head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+</head>
 <div>
-<%= react_component("Recipe_index", { recipies: @recipe_details,user:current_user}) %>
+    <%= react_component("Recipe_index", { recipies: @recipe_details,user:current_user,step_with_its_comments: @step_with_its_comments}) %>
 </div>

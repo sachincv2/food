@@ -17,7 +17,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,200;0,400;1,400&display=swap');
 body {
     background-color: F7F9FA;
 }
@@ -43,7 +43,6 @@ body p {
 }
 .comment-list{
     width: 100%;
-    height: 70px;
     border-bottom: 1px solid #e3e8ed;
     padding: 5px;
     color: #525d66;

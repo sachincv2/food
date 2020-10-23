@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'recipie/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'home/index'
-  resources :recipie
+  resources :recipie do 
+    resources :likes
+  end
   resources :category
   get 'home/dashboard'
   resources :upload

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_21_123338) do
+ActiveRecord::Schema.define(version: 2020_10_23_071014) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -57,6 +57,15 @@ ActiveRecord::Schema.define(version: 2020_10_21_123338) do
     t.integer "user_id", null: false
     t.index ["step_id"], name: "index_comments_on_step_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "recipie_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipie_id"], name: "index_likes_on_recipie_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "recipies", force: :cascade do |t|
@@ -107,5 +116,7 @@ ActiveRecord::Schema.define(version: 2020_10_21_123338) do
   add_foreign_key "category_recipies", "recipies", column: "recipie_id"
   add_foreign_key "comments", "steps"
   add_foreign_key "comments", "users"
+  add_foreign_key "likes", "recipies", column: "recipie_id"
+  add_foreign_key "likes", "users"
   add_foreign_key "steps", "recipies", column: "recipie_id"
 end
